@@ -37,7 +37,7 @@ jobs:
 
             npm install
 
-           pm2 start /var/www/my-node-app/src/index.js --name my-node-app
+            pm2 restart my-node-app || pm2 start /var/www/my-node-app/src/index.js --name my-node-app
 
             pm2 save
           EOF
