@@ -19,7 +19,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Configure SSH
         run: |
@@ -35,7 +35,7 @@ jobs:
 
             git pull origin main
 
-            npm i 
+            npm install
 
             pm2 restart my-node-app || pm2 start app.js --name my-node-app
 
